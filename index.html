@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucía Fuentes González — CV Web</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8f9fb;--card:#fff;
+  --a:#1a5276;--a2:#2980b9;--a3:rgba(41,128,185,.07);--al:#e8f1f8;
+  --ink:#1c1c2e;--body:#444;--muted:#888;--faint:#bbb;
+  --b:rgba(0,0,0,.07);--bl:rgba(0,0,0,.04);
+  --sh:0 1px 3px rgba(0,0,0,.04),0 6px 20px rgba(0,0,0,.03);
+  --sh2:0 4px 12px rgba(0,0,0,.05),0 16px 40px rgba(0,0,0,.05);
+  --serif:'Fraunces',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;
+  --r:14px;--w:840px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+body{font-family:var(--sans);background:var(--bg);color:var(--body);line-height:1.72;font-size:16px;-webkit-font-smoothing:antialiased}
+::selection{background:var(--a2);color:#fff}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid var(--b)}
+.ni{max-width:var(--w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 28px;height:54px}
+.nl{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--a);text-decoration:none}
+.nl i{font-style:italic;font-weight:300;color:var(--a2)}
+.nk{display:flex;gap:3px}
+.nk a{font-size:12px;font-weight:500;color:var(--muted);text-decoration:none;padding:5px 10px;border-radius:6px;transition:.2s}
+.nk a:hover{color:var(--a);background:var(--a3)}
+
+.hero{min-height:100vh;display:flex;align-items:center;padding:80px 28px 48px;background:linear-gradient(170deg,#f8f9fb,#eaf2f8 50%,#f8f9fb)}
+.hero::after{content:'';position:absolute;top:12%;right:5%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(41,128,185,.05),transparent 65%);pointer-events:none}
+.hi{max-width:var(--w);margin:0 auto;width:100%;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border-radius:100px;padding:5px 14px 5px 7px;font-size:12px;font-weight:600;color:var(--a);margin-bottom:24px}
+.hero-badge img{height:70px;width:auto;border-radius:3px}
+.hero h1{font-family:var(--serif);font-size:clamp(2.6rem,6.5vw,4.4rem);line-height:1.06;color:var(--a);letter-spacing:-1.5px;font-weight:700;margin-bottom:16px}
+.hero h1 em{font-style:italic;font-weight:300;color:var(--body);display:block}
+.hd1{font-size:17px;color:rgba(0,0,0,0.919);max-width:500px;line-height:1.65;font-weight:300;margin-bottom:0}
+.hd2{font-size:17px;color:var(--muted);max-width:500px;line-height:1.65;font-weight:300;margin-bottom:28px}
+.hc{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;align-content:center}
+img{height:20px;width:auto}
+.chip{font-size:12px;font-weight:500;color:var(--body);background:var(--card);border:1px solid var(--b);padding:5px 13px;border-radius:100px;text-decoration:none;transition:.2s;display:inline-flex;align-items:center;gap:5px}
+.chip:hover{border-color:var(--a2);color:var(--a)}
+.hb{display:flex;gap:10px;flex-wrap:wrap}
+.btn{font-size:13px;font-weight:600;padding:11px 22px;border-radius:10px;text-decoration:none;transition:.25s;display:inline-flex;align-items:center;gap:7px}
+.btn-p{background:var(--a);color:#fff;box-shadow:0 2px 8px rgba(26,82,118,.25)}
+.btn-p:hover{background:var(--a2);box-shadow:0 4px 16px rgba(26,82,118,.3)}
+.btn-s{background:var(--card);color:var(--ink);border:1.5px solid var(--b);box-shadow:var(--sh)}
+.btn-s:hover{border-color:var(--a2);color:var(--a)}
+
+.s{max-width:var(--w);margin:0 auto;padding:72px 28px}
+.st{font-family:var(--mono);font-size:11px;color:var(--a2);letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.st::before{content:'';width:18px;height:1.5px;background:var(--a2)}
+.s h2{font-family:var(--serif);font-size:clamp(1.6rem,3.5vw,2.2rem);color:var(--a);line-height:1.2;margin-bottom:8px;letter-spacing:-.4px;font-weight:500}
+.s .ld{color:var(--muted);font-size:14.5px;margin-bottom:36px;max-width:560px;font-weight:300;line-height:1.7}
+.dv{max-width:var(--w);margin:0 auto;padding:0 28px}
+.dv hr{border:none;height:1px;background:var(--b)}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.rv.v{opacity:1;transform:translateY(0)}
+
+.c{background:var(--card);border:1px solid var(--b);border-radius:var(--r);padding:26px;box-shadow:var(--sh);transition:.3s}
+.c:hover{box-shadow:var(--sh2);transform:translateY(-1px)}
+.cl{font-family:var(--mono);font-size:10.5px;font-weight:500;color:var(--a2);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+.c h3{font-size:16px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.c .m{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:8px}
+.c p{font-size:14px;color:var(--body);line-height:1.68}
+.c ul{list-style:none}.c li{padding-left:14px;position:relative;font-size:14px;color:var(--body);line-height:1.6;margin-bottom:3px}
+.c li::before{content:'—';position:absolute;left:0;color:var(--a2);font-size:11px;top:2px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.w2{grid-column:1/-1}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.t{font-family:var(--mono);font-size:10.5px;padding:5px 14px;border-radius:100px;border:1px solid var(--b);color:var(--body);background:var(--card);transition:.2s}
+.t:hover{border-color:var(--a2);color:var(--a);box-shadow:0 2px 5px rgba(41,128,185,.1)}
+.t.hi{background:var(--al);color:var(--a);border-color:transparent}
+.skt{font-family:var(--mono);font-size:10px;color:var(--faint);text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px;margin-top:14px}
+.skt:first-child{margin-top:0}
+
+.pw{display:grid;gap:14px}
+.pb{background:var(--card);border:1px solid var(--b);border-radius:var(--r);padding:26px 28px;box-shadow:var(--sh);position:relative;overflow:hidden;transition:.3s}
+.pb:hover{box-shadow:var(--sh2);transform:translateY(-1px)}
+.pb .n{position:absolute;top:6px;right:14px;font-family:var(--serif);font-size:68px;font-weight:700;color:rgba(26,82,118,.04);line-height:1}
+.pb .pt{font-family:var(--mono);font-size:10px;color:var(--a2);text-transform:uppercase;letter-spacing:1.2px;margin-bottom:6px}
+.pb h3{font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:8px;font-weight:500;line-height:1.35}
+.pb p{font-size:14.5px;color:var(--body);line-height:1.76;margin-bottom:6px}
+.pb p:last-child{margin-bottom:0}
+.pb p strong{color:var(--ink);font-weight:600}
+
+details{margin-top:24px;text-align:center}
+details summary{font-family:var(--mono);font-size:12px;color:var(--a2);cursor:pointer;list-style:none;padding:9px 20px;border:1.5px solid var(--a2);border-radius:100px;display:inline-block;transition:.2s}
+details summary:hover{background:var(--a);color:#fff;border-color:var(--a)}
+details summary::-webkit-details-marker{display:none}
+.cf{margin-top:14px;background:var(--card);border:1px solid var(--b);border-radius:var(--r);padding:36px 40px;box-shadow:var(--sh);font-size:14px;line-height:1.8;color:var(--body);text-align:left}
+.cf .r{text-align:right;font-size:13px;margin-bottom:16px;line-height:1.6}
+.cf .d{font-size:13px;margin-bottom:6px;line-height:1.6}
+.cf .f{text-align:right;font-size:13px;margin-bottom:20px}
+.cf p{margin-bottom:10px}
+.cf .firma{margin-top:18px;font-weight:700;color:var(--ink)}
+
+.pdf-w{background:var(--card);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);margin-top:16px}
+.pdf-bar{background:var(--bg);padding:10px 20px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center}
+.pdf-bar span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.pdf-bar a{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--a);text-decoration:none;padding:5px 14px;border:1.5px solid var(--a);border-radius:8px;transition:.2s}
+.pdf-bar a:hover{background:var(--a);color:#fff}
+.pdf-f{width:100%;height:700px;border:none;display:block}
+
+/* ── SLIDES ── */
+.sl{display:grid;gap:12px}
+.sd{background:var(--card);border:1px solid var(--b);border-radius:var(--r);padding:22px;display:grid;grid-template-columns:38px 1fr;gap:14px;box-shadow:var(--sh);transition:.3s}
+.sd:hover{box-shadow:var(--sh2)}
+.sn{font-family:var(--serif);font-size:28px;font-weight:300;color:var(--a2);line-height:1;opacity:.6}
+.sc h4{font-family:var(--serif);font-size:15px;color:var(--a);margin-bottom:5px;font-weight:500}
+.sc p,.sc li{font-size:13.5px;color:var(--body);line-height:1.6}
+.sc ul{list-style:none;margin-top:3px}.sc li{padding-left:12px;position:relative;margin-bottom:2px}
+.sc li::before{content:'▸';position:absolute;left:0;color:var(--a2);font-size:10px;top:3px}
+.sb{font-family:var(--mono);font-size:9.5px;color:var(--a2);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+
+/* Guion collapsible */
+.sg-toggle{margin-top:8px;text-align:left}
+.sg-toggle summary{font-family:var(--mono);font-size:10px;color:var(--a2);cursor:pointer;list-style:none;padding:4px 10px;border:1px solid var(--b);border-radius:6px;display:inline-block;transition:.2s}
+.sg-toggle summary:hover{background:var(--al);border-color:var(--a2)}
+.sg-toggle summary::-webkit-details-marker{display:none}
+.sg-toggle summary::before{content:'▶ ';font-size:8px}
+.sg-toggle[open] summary::before{content:'▼ '}
+.sg{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:8px;padding:10px 12px;background:var(--bg);border-radius:8px;border:1px dashed var(--b);line-height:1.55}
+
+/* ── VIDEO ── */
+.video-w{background:var(--card);border:1px solid var(--b);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh2);margin-top:16px}
+.video-bar{background:var(--bg);padding:10px 20px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center}
+.video-bar span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.video-frame{width:100%;aspect-ratio:16/9;display:block;background:#000}
+.video-frame video{width:100%;height:100%;display:block}
+
+/* ── BLOG ── */
+.bg{background:var(--card);border:1px solid var(--b);border-radius:var(--r);padding:40px 36px;box-shadow:var(--sh)}
+.bg .bm{font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:24px;display:flex;gap:14px;flex-wrap:wrap}
+.bg h3{font-family:var(--serif);font-size:clamp(1.2rem,2.8vw,1.7rem);color:var(--a);line-height:1.25;margin-bottom:24px;font-weight:500}
+.bg p{font-size:14.5px;color:var(--body);line-height:1.8;margin-bottom:14px}
+.bg p strong{color:var(--ink)}
+.bg h4{font-size:15px;font-weight:600;color:var(--ink);margin:24px 0 10px}
+.bg .pq{border-left:3px solid var(--a2);padding:12px 22px;margin:22px 0;font-family:var(--serif);font-size:16px;color:var(--a);font-style:italic;background:var(--al);border-radius:0 12px 12px 0}
+.bg .sr{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:20px;padding-top:12px;border-top:1px solid var(--b);line-height:1.5}
+
+footer{max-width:var(--w);margin:0 auto;padding:36px 28px 56px;border-top:1px solid var(--b);text-align:center}
+footer p{font-family:var(--mono);font-size:11px;color:var(--faint)}
+footer a{color:var(--a);text-decoration:none}
+
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.hi>*{animation:up .65s ease both}
+.hi>*:nth-child(2){animation-delay:.08s}
+.hi>*:nth-child(3){animation-delay:.16s}
+.hi>*:nth-child(4){animation-delay:.24s}
+.hi>*:nth-child(5){animation-delay:.32s}
+
+@media(max-width:640px){.nk{display:none}.g2{grid-template-columns:1fr}.cf,.bg{padding:24px 20px}.sd{grid-template-columns:1fr;gap:6px}.sn{font-size:18px}.hero{padding:88px 20px 40px}.pdf-f{height:500px}.pb{padding:20px}}
+</style>
+</head>
+<body>
+
+<nav><div class="ni"><a href="#" class="nl">Lucía Fuentes <i>González</i></a><div class="nk"><a href="#presentacion">Presentación</a><a href="#cv">CV</a><a href="#linkedin">LinkedIn</a><a href="#oral">Oral</a><a href="#blog">Blog</a></div></div></nav>
+
+<section class="hero"><div class="hi">
+  <div class="hero-badge"><img src="https://ametic.es/wp-content/uploads/2023/04/LOGOTIPO-leyenda-color-PNG-p.png" alt="UPM" onerror="this.style.display='none'"> ETSIINF · UPM</div>
+  <h1>Lucía Fuentes<em>González</em></h1>
+  <p class="hd1">Desarrollo backend · Java · Sistemas distribuidos · Software libre.</p>
+  <p class="hd2">Estudiante de último curso de Ingeniería Informática.</p>
+  <div class="hc"><a href="mailto:luciafuentesgonzalez03@gmail.com" class="chip">luciafuentesgonzalez03@gmail.com</a><a href="tel:+34722150173" class="chip">☎ +34 722 15 01 73</a><span class="chip">📍 Madrid</span><a href="https://www.linkedin.com/in/lucia-fuentes-glez" target="_blank" class="chip"><img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/926/small/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn"> lucia-fuentes-glez</a></div>
+  <div class="hb"><a href="#presentacion" class="btn btn-p">Sobre mí</a><a href="#cv" class="btn btn-s">Ver mi CV</a></div>
+</div></section>
+
+<!-- 01 · PRESENTACIÓN -->
+<section class="s" id="presentacion"><span class="st">01 · Presentación</span><h2>Quién soy y qué busco</h2><p class="ld">Candidatura al puesto de Junior Software Engineer Backend (Java/Kotlin) en <span style="white-space:nowrap">Aubay · Esparraguera</span>. Oferta publicada en el portal de Aubay España.</p>
+<div class="pw">
+  <div class="pb rv"><div class="n">01</div><div class="pt">Quién soy</div><h3>Ingeniera informática en formación</h3><p>Estudio el último curso del Grado en Ingeniería Informática en la <strong>ETSIINF de la UPM</strong>. Java es mi lenguaje principal desde segundo curso, trabajo a diario en <strong>GNU/Linux</strong> y me interesan los sistemas que funcionan por debajo de lo que el usuario ve: el backend.</p></div>
+  <div class="pb rv"><div class="n">02</div><div class="pt">Qué sé hacer</div><h3>Experiencia funcional y analítica en consultoría</h3><p>He cursado asignaturas clave para el puesto: <strong>Bases de Datos</strong> (diseño relacional, SQL), <strong>Sistemas Distribuidos</strong> (tolerancia a fallos), <strong>Concurrencia</strong> (hilos y sincronización en Java), <strong>Ingeniería del Software I y II</strong> (SOLID, Clean Code, patrones, pruebas unitarias y de integración) y <strong>Sistemas Orientados a Servicios</strong> (APIs REST, arquitecturas asíncronas).</p><p>En mis prácticas en <strong>Management Solutions</strong> (oct. 2025 – actualidad), desarrollé modelos de datos en estrella y métricas avanzadas en <strong>Power BI (DAX)</strong>. Además, diseñé scripts en <strong>Python (Pandas, PyQt6, multihilo con QThread)</strong> para automatizar la gestión documental interna, traduje requisitos funcionales a diagramas de flujo de estados (UML) y di soporte PMO gestionando hitos y bloqueos temporales en entornos Scrum.</p></div>
+  <div class="pb rv"><div class="n">03</div><div class="pt">Qué me mueve</div><h3>El software libre como forma de trabajar</h3><p>Leer código de proyectos abiertos, contribuir a la comunidad y documentar lo que hago es parte de mi aprendizaje. Esa costumbre —revisar, compartir, preguntar— encaja con un equipo que trabaja con revisiones de código y mentoría continua.</p></div>
+  <div class="pb rv"><div class="n">04</div><div class="pt">Qué busco</div><h3>Un equipo donde crecer como backend engineer</h3><p>Me interesa Aubay —multinacional con más de 5 000 profesionales y 25 años en transformación digital— porque el trabajo con <strong>Spring Boot, microservicios y RabbitMQ</strong> conecta con mi formación. La cultura de <strong>mentoría, pair programming y revisiones de código</strong> es donde mejor aprendo. Y los problemas del sector hotelero —alta disponibilidad, integraciones— son retos que quiero resolver.</p></div>
+</div>
+<details><summary>↓ Ver carta formal completa</summary><div class="cf">
+  <div class="r">Lucía Fuentes González<br>Madrid, España<br>+34 722 15 01 73<br>luciafuentesgonzalez03@gmail.com</div>
+  <div class="d">Departamento de Selección · Aubay España · Esparraguera, Barcelona</div>
+  <div class="f">Madrid, 26 de mayo de 2026</div>
+  <p>Estimado equipo de selección:</p>
+  <p>Me dirijo a ustedes para presentar mi candidatura al puesto de Junior Software Engineer Backend (Java/Kotlin), publicado para su sede de Esparraguera. Como estudiante de último curso del Grado en Ingeniería Informática en la ETSIINF de la UPM, sigo de cerca la trayectoria de Aubay en el sector de los servicios digitales y la transformación tecnológica. Me motiva especialmente su propuesta por la oportunidad de integrarme en una plataforma de producción real bajo una sólida cultura de mentoría, pair programming y revisión de código.</p>
+  <p>Mi formación académica me ha dotado de bases sólidas en el ciclo de vida del desarrollo de software (SDLC) mediante asignaturas como Bases de Datos (diseño relacional y consultas SQL), Concurrencia y Sistemas Distribuidos. En estas disciplinas he interiorizado los principios SOLID y las directrices de Clean Code, trabajando habitualmente bajo entornos GNU/Linux y control de versiones con Git.</p>
+  <p>Durante mi reciente periodo de prácticas en Management Solutions (octubre 2025 – mayo 2026), dentro del departamento de tecnología, consolidé estas capacidades desde una perspectiva analítica y funcional. En el marco de un proyecto bancario, asumí de forma individual el diseño y despliegue de modelos de datos en estrella mediante Power BI, explotando fuentes heterogéneas con expresiones complejas en lenguaje DAX. Asimismo, en el proyecto de migración de una plataforma de servicing, mi labor consistió en realizar lecturas comprensivas de requerimientos técnicos y traducir su evolución funcional a diagramas de flujo de estados en lenguaje UML. Complementariamente, con el fin de optimizar la eficiencia del equipo, desarrollé herramientas de automatización de extremo a extremo utilizando Python, implementando interfaces gráficas con PyQt6 y arquitecturas multihilo (QThread) para el procesamiento por lotes (batch) de documentación oficial.</p>
+  <p>Esta experiencia me aportó un dominio riguroso de las metodologías ágiles (Scrum con JIRA y Confluence), una fuerte orientación al detalle para identificar bloqueos técnicos y, sobre todo, una alta capacidad de abstracción para comprender arquitecturas complejas (como sistemas CTI, procesos por lotes e integraciones de datos). Considero que este perfil analítico me capacita para dar el salto al desarrollo backend con garantías, permitiéndome asimilar rápidamente su ecosistema tecnológico basado en Spring Boot, Hibernate/JPA y RabbitMQ. Asimismo, comparto plenamente el valor que otorgan al uso de asistentes de IA como Claude Code o GitHub Copilot de forma efectiva y con criterio, herramientas con las que ya tengo familiaridad práctica en mi flujo de aprendizaje.</p>
+  <p>Agradezco de antemano su tiempo y consideración, y quedo a su entera disposición para ampliar los detalles de mi perfil en una entrevista técnica o personal.</p>
+  <p>Atentamente,</p><p class="firma">Lucía Fuentes González</p>
+</div></details>
+</section><div class="dv"><hr></div>
+
+<!-- 02 · CV -->
+<section class="s" id="cv"><span class="st">02 · Currículum vitae</span><h2>Formación, experiencia y competencias</h2>
+<div class="pdf-w rv"><div class="pdf-bar"><span>CV_LuciaFuentes_2026.pdf</span><a href="CV_LuciaFuentes_2026.pdf" download>↓ Descargar</a></div><iframe src="CV_LuciaFuentes_2026.pdf" class="pdf-f" title="CV en PDF"></iframe></div>
+<div class="g2" style="margin-top:18px">
+  <div class="c rv"><div class="cl">Experiencia</div><h3>Consultora en prácticas</h3><div class="m">Management Solutions · Madrid · oct. 2025 – actualidad</div><ul>
+    <li><strong>Modelado analítico</strong> de datos (estrella) y métricas DAX en Power BI.</li>
+    <li><strong>Automatización</strong> documental con scripts multihilo en <strong>Python</strong> (PyQt6/Pandas).</li>
+    <li><strong>Análisis funcional</strong> y diagramas de flujo (<strong>UML</strong>) para migración de sistemas.</li>
+    <li>Soporte PMO, gestión de hitos y dependencias en <strong>JIRA y Confluence</strong> (<strong>Scrum</strong>).</li>
+  </ul></div>
+  <div class="c rv"><div class="cl">Formación</div><h3>Grado en Ingeniería Informática</h3><div class="m">ETSIINF · UPM · 2021 – actualidad</div><p>Bases de Datos, Sistemas Distribuidos, Concurrencia, Ing. Software I-II, Sistemas Orientados a Servicios, Redes, Seguridad, IA, SO, Algoritmos y ED.</p><h3 style="margin-top:10px">Bachillerato</h3><div class="m">IES César Manrique · Lanzarote · 2021</div><p>Premio Narración José Saramago y Juegos Florales.</p></div>
+  <div class="c rv"><div class="cl">Proyectos</div><h3>Investiga I+D+i</h3><div class="m">Fundación San Patricio</div><p>Finalista nacional: Blockchain.</p><h3 style="margin-top:10px">Congreso Try IT!</h3><div class="m">DAETSIINF · UPM</div><p>Voluntariado en organización del congreso.</p></div>
+  <div class="c rv"><div class="cl">Idiomas y certificaciones</div><h3>Idiomas</h3><ul><li>Español: nivel nativo</li><li>Inglés: B2 (MCER) — Cambridge B2 First</li></ul><h3 style="margin-top:10px">Certificaciones</h3><ul><li>IBM SkillsBuild</li><li>Título elemental piano — CIEM Arrecife</li></ul></div>
+</div>
+<div class="c w2 rv" style="margin-top:14px">
+  <div class="cl" style="margin-bottom:16px">Competencias orientadas al puesto</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px">
+    <div style="background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:18px"><div class="skt" style="margin-top:0;color:var(--a);font-weight:600;border-bottom:1px dashed var(--b);padding-bottom:8px;margin-bottom:12px">Backend y Lenguajes (Prioritarios)</div><div class="tags"><span class="t hi">Java (Avanzado)</span><span class="t hi">Spring Boot</span><span class="t hi">APIs REST</span><span class="t hi">SQL / MySQL</span><span class="t">Python</span><span class="t">C / C++</span><span class="t">Prolog</span><span class="t">R · MATLAB</span></div></div>
+    <div style="background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:18px"><div class="skt" style="margin-top:0;color:var(--a);font-weight:600;border-bottom:1px dashed var(--b);padding-bottom:8px;margin-bottom:12px">Sistemas y Herramientas</div><div class="tags"><span class="t hi">GNU/Linux · Bash / Awk</span><span class="t hi">Git (Flujos colaborativos)</span><span class="t">HTML5 / CSS3 / JavaScript</span></div></div>
+    <div style="background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:18px"><div class="skt" style="margin-top:0;color:var(--a);font-weight:600;border-bottom:1px dashed var(--b);padding-bottom:8px;margin-bottom:12px">Metodologías, SDLC y Calidad (QA)</div><div class="tags"><span class="t hi">SOLID</span><span class="t hi">Clean Code</span><span class="t hi">Diagramas UML (Requisitos)</span><span class="t">Sistemas Distribuidos</span><span class="t">Concurrencia</span><span class="t">Scrum (JIRA / Confluence)</span></div></div>
+    <div style="background:var(--bg);border:1px solid var(--b);border-radius:10px;padding:18px"><div class="skt" style="margin-top:0;color:var(--a);font-weight:600;border-bottom:1px dashed var(--b);padding-bottom:8px;margin-bottom:12px">Transversales</div><div class="tags"><span class="t">Documentación técnica</span><span class="t">Trabajo en equipo</span><span class="t">Comunicación técnica</span><span class="t">Aprendizaje autónomo</span></div></div>
+  </div>
+</div>
+</section><div class="dv"><hr></div>
+
+<!-- 03 · LINKEDIN -->
+<section class="s" id="linkedin"><span class="st">03 · Perfil de LinkedIn</span>
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:8px">
+  <h2 style="margin-bottom:0">Presencia profesional en línea</h2>
+  <a href="https://www.linkedin.com/in/lucia-fuentes-glez" target="_blank" class="btn" style="background:#0a66c2;color:#fff;box-shadow:0 2px 8px rgba(10,102,194,.25);display:inline-flex;align-items:center;gap:8px"><img src="https://static.vecteezy.com/system/resources/thumbnails/023/986/926/small/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.png" alt="LinkedIn" style="height:18px;width:auto;display:block"> Conectar en LinkedIn</a>
+</div>
+<p class="ld">Contenido del perfil profesional de LinkedIn simulado.</p>
+<div class="c w2 rv" style="margin-bottom:14px"><div class="cl">Titular profesional</div><p style="font-size:16px;font-weight:600;color:var(--ink)">Estudiante de Ingeniería Informática en la UPM | Enfoque en Desarrollo Backend (Java) y Sistemas Distribuidos | Consultora tecnológica en prácticas</p></div>
+<div class="c w2 rv" style="margin-bottom:14px"><div class="cl">Acerca de (Extracto)</div>
+  <p>Estudiante de último año de Ingeniería Informática en la UPM, orientada al desarrollo backend en Java, el ciclo de vida del software (SDLC) y el diseño analítico de datos.</p>
+  <p style="margin-top:8px">Durante mi experiencia en consultoría tecnológica, consolidé mis competencias técnicas implementando modelos analíticos en estrella en Power BI (DAX) con seguridad RLS. Asimismo, desarrollé herramientas de automatización en Python (PyQt6, Pandas) para la estructuración documental y colaboré en el modelado funcional en UML bajo marcos Scrum con JIRA y Confluence.</p>
+  <p style="margin-top:8px">Me motiva profundizar en la tolerancia a fallos en sistemas distribuidos y aplicar asistentes de IA bajo un sólido criterio de ingeniería. Busco activamente incorporarme a un equipo colaborativo que fomente las revisiones de código y el aprendizaje continuo.</p>
+</div>
+<div class="g2">
+  <div class="c rv"><div class="cl">Experiencia</div><h3>Consultora en prácticas</h3><div class="m">Management Solutions · Madrid · oct. 2025 – actualidad</div><p>Diseño de modelos analíticos en estrella (DAX) con seguridad RLS. Automatización documental con scripts en Python (Pandas/PyQt6). Modelado funcional en UML y soporte operativo en PMO bajo entornos Scrum (JIRA/Confluence).</p></div>
+  <div class="c rv"><div class="cl">Aptitudes destacadas</div><div class="tags" style="margin-top:4px"><span class="t">Java</span><span class="t">SQL</span><span class="t">Git</span><span class="t">Python</span><span class="t">Sistemas distribuidos</span><span class="t">Diagramas UML</span><span class="t">Clean Code</span><span class="t">Scrum</span><span class="t">Spring Boot</span></div></div>
+</div>
+<div class="c w2 rv" style="margin-top:14px"><div class="cl">Recomendaciones recibidas</div>
+  <p style="font-style:italic;background:var(--bg);padding:14px 18px;border-radius:12px;margin-bottom:10px">«Trabajé con Lucía en un proyecto grupal de Ingeniería del Software II. Se encargó de estructurar la lógica del sistema y el flujo de control. Lo que más destaco de ella es su organización: mantuvo toda la documentación clara y al día, lo que nos evitó muchos problemas al integrar los módulos de cada uno. Es muy metódica y sabe resolver dudas técnicas en equipo.»</p><div class="m">— Compañero de equipo, ETSIINF (UPM)</div>
+  <p style="font-style:italic;background:var(--bg);padding:14px 18px;border-radius:12px;margin-top:12px;margin-bottom:10px">«Compartí equipo con Lucía en Sistemas Orientados a Servicios. Durante el laboratorio, nos atascamos varios días con un problema de sincronización que bloqueaba el servicio de pedidos. Lucía revisó el flujo pacientemente hasta detectar el fallo en la concurrencia y lo documentó para que todos entendiéramos el flujo. Es muy clara al comunicar decisiones técnicas.»</p><div class="m">— Compañera de equipo, ETSIINF (UPM)</div>
+</div>
+<div class="g2" style="margin-top:14px">
+  <div class="c rv"><div class="cl">Recomendación dada</div><p style="font-style:italic">«Colaboré con Pablo en el desarrollo de una práctica compleja de Redes. Es un compañero muy riguroso con el control de versiones y la arquitectura cliente-servidor. Hizo un trabajo impecable estructurando las pruebas del sistema, adelantándose a varios fallos antes de la entrega final. Explica muy bien lo que hace y aporta muchísimo valor al grupo.»</p></div>
+  <div class="c rv"><div class="cl">Actividad en la red</div><p><strong>Publicación propia:</strong> «En la asignatura de Español Profesional y Académico hemos analizado cómo estructurar un perfil de LinkedIn estratégico para estudiantes en busca de sus primeras oportunidades profesionales. Comparto el enfoque analítico y las competencias de ingeniería de software que he priorizado en mi perfil. #IngenieriaDelSoftware #Backend #UPM»</p><p style="margin-top:8px"><strong>Comentario argumentado:</strong> «Considero fundamental entender el ciclo de vida del desarrollo de software (SDLC) antes de plantear la migración hacia una arquitectura de microservicios, ya que el coste de comunicación entre componentes puede perjudicar el rendimiento si no está bien justificado.»</p></div>
+</div>
+</section><div class="dv"><hr></div>
+
+<!-- 04 · PRESENTACIÓN ORAL -->
+<section class="s" id="oral"><span class="st">04 · Presentación oral</span><h2>Presentación grabada</h2><p class="ld">Vídeo de la presentación individual (5-7 min) con las diapositivas integradas. Debajo, el material de apoyo (diapositivas en PDF) y el guion por bloques.</p>
+
+<!-- VIDEO -->
+<div class="video-w rv">
+  <div class="video-bar"><span>Presentación oral — Lucía Fuentes González</span></div>
+  <div class="video-frame">
+    <video controls preload="metadata" poster="">
+      <source src="Presentacion_LuciaFuentes_Aubay.mp4" type="video/mp4">
+      <source src="Presentacion_LuciaFuentes_Aubay.webm" type="video/webm">
+      Tu navegador no soporta vídeo HTML5. <a href="Presentacion_LuciaFuentes_Aubay.mp4" download>Descarga el vídeo</a>.
+    </video>
+  </div>
+</div>
+
+<!-- PPT como PDF -->
+<div class="pdf-w rv" style="margin-top:16px">
+  <div class="pdf-bar"><span>Diapositivas — Presentacion_Lucia_Fuentes_Aubay.pdf</span><a href="Presentacion_LuciaFuentes_Aubay.pdf" download>↓ Descargar</a></div>
+  <iframe src="Presentacion_LuciaFuentes_Aubay.pdf" class="pdf-f" style="height:500px" title="Diapositivas de la presentación"></iframe>
+</div>
+
+<!-- GUION COMPLETO DESPLEGABLE -->
+<details style="margin-top:28px;text-align:center">
+  <summary>↓ Ver guion completo de la presentación oral</summary>
+  <div class="cf" style="margin-top:14px;text-align:left">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 1: Portada e Introducción <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 1 — Quién soy)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Lucía Fuentes González · Grado en Ingeniería Informática · ETSIINF, UPM.</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«Cada segundo se procesan más de 250 reservas de hotel en todo el mundo. <em style="color:var(--a2)">[Pausa de 2 segundos — Mirada directa a la cámara]</em>. Detrás de ese número no solo hay una interfaz web; hay sistemas complejos, concurrencia y bases de datos que deben soportar esa carga sin fallar.<br><br>Me llamo Lucía Fuentes González, estoy en el último curso de Ingeniería Informática en la UPM y hoy me presento ante ustedes como candidata a las prácticas de ingeniería backend en Aubay. Me apasiona entender cómo funciona el software por debajo, allí donde el usuario no lo ve, y por eso he orientado mi perfil hacia los sistemas distribuidos y la lógica de servidor.»</p>
+
+    <hr style="border:none;border-top:1px dashed var(--b);margin:24px 0">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 2: Formación Académica <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 2 — Mi base técnica)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Formación en la Escuela: Java · Bases de Datos · Sistemas Distribuidos · Ingeniería del Software (SOLID / Clean Code).</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«<em style="color:var(--a2)">[Transición verbal]</em> Si algo me ha enseñado mi paso por la universidad, es que construir software robusto requiere método. En la carrera he adquirido una base sólida en el ciclo de vida del desarrollo. En asignaturas como Bases de Datos aprendí a diseñar esquemas relacionales óptimos; y en Ingeniería del Software interioricé que aplicar principios SOLID y Clean Code desde el primer día ahorra cientos de horas de depuración en el futuro.<br><br>Java ha sido mi entorno principal de desarrollo académico. No me limito a escribir código que funcione; me interesa comprender la gestión de hilos, la sincronización en entornos de concurrencia y cómo estructurar APIs REST que sean escalables.»</p>
+
+    <hr style="border:none;border-top:1px dashed var(--b);margin:24px 0">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 3: Experiencia Práctica <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 2 — Entorno profesional)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Prácticas en Consultoría: Modelado analítico (Power BI/DAX/RLS) · Automatización con Python (PyQt6/Multihilo) · Soporte PMO (Scrum).</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«Esta base teórica cobró verdadero sentido durante mi periodo de prácticas en el departamento de tecnología de una consultora de negocio <em style="color:var(--a2)">[Pausa de 1 segundo]</em>. Allí aprendí que el software siempre responde a una necesidad del mundo real o a un marco regulatorio. En un proyecto bancario, asumí de forma individual la creación de modelos de datos en estrella mediante Power BI, implementando lógica compleja en DAX y configurando reglas de seguridad a nivel de fila para proteger información financiera sensible.<br><br>Además, al detectar una ineficiencia en la gestión documental del equipo, desarrollé por iniciativa propia una aplicación de escritorio multihilo en Python utilizando PyQt6 y QThread para automatizar el procesamiento por lotes de actas oficiales. <em style="color:var(--a2)">[Transición verbal]</em> Esta experiencia, sumada al soporte analítico en la oficina de gestión de proyectos bajo el marco Scrum, me enseñó a manejar la volatilidad de los requisitos y a comunicarme de forma clara con perfiles técnicos y de negocio.»</p>
+
+    <hr style="border:none;border-top:1px dashed var(--b);margin:24px 0">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 4: Factor Diferencial <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 3 — Código abierto e IA)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Mi Sello: Aprendizaje autónomo en proyectos de software libre · Adopción crítica de asistentes de IA.</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«Si tuviera que destacar qué me diferencia como ingeniera en formación, diría que es mi curiosidad por el software libre. No solo uso entornos Linux en mi día a día; me gusta abrir los repositorios públicos y analizar el código de las herramientas que utilizo para entender cómo están construidas. Por ejemplo, cuando estudié la inyección de dependencias, fui a revisar el código fuente de Spring para asimilarlo a fondo. Creo firmemente que esa costumbre de leer código ajeno es una competencia indispensable en un equipo que realiza revisiones de código y pair programming.<br><br>Asimismo, considero que los asistentes actuales como Claude Code o GitHub Copilot son excelentes aliados para la eficiencia, siempre y cuando se adopten con criterio técnico y el control absoluto quede en manos de la ingeniería y de un diseño riguroso de pruebas unitarias.»</p>
+
+    <hr style="border:none;border-top:1px dashed var(--b);margin:24px 0">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 5: Por qué Aubay <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 3 — Alineación cultural)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Aubay y mi Proyección: Spring Boot &amp; RabbitMQ · Cultura de mentoría · Desafíos de alta disponibilidad.</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«No presento mi candidatura a Aubay por casualidad. <em style="color:var(--a2)">[Pausa de 2 segundos para enfatizar]</em> He investigado sus proyectos y sé que su ecosistema tecnológico —basado en arquitecturas de microservicios con Spring Boot, Hibernate y colas de mensajes con RabbitMQ— conecta directamente con lo que he estudiado y quiero desarrollar.<br><br>Sé que son una multinacional con miles de profesionales, pero lo que más me atrae es su apuesta por la mentoría continua y el trabajo colaborativo. Considero que un entorno donde hacer preguntas es bienvenido y las revisiones de código son la norma, es el escenario ideal para acelerar mi crecimiento técnico. Me entusiasma la idea de aportar mi capacidad analítica para resolver problemas reales del sector hotelero, como la alta disponibilidad y la integración de sistemas.»</p>
+
+    <hr style="border:none;border-top:1px dashed var(--b);margin:24px 0">
+
+    <h3 style="font-family:var(--serif);font-size:17px;color:var(--a);margin-bottom:16px;font-weight:500">Diapositiva 6: Conclusión y Cierre <span style="font-size:12px;color:var(--muted);font-weight:400">(Bloque 4 — Propuesta de valor)</span></h3>
+    <p style="font-size:12px;color:var(--faint);margin-bottom:8px"><strong style="color:var(--a2)">Texto en pantalla:</strong> Compromiso: Rigor analítico · Calidad de código · Ganas de aportar al equipo. Contacto: luciafuentesgonzalez03@gmail.com.</p>
+    <p style="background:var(--bg);padding:16px 20px;border-radius:10px;border-left:3px solid var(--a2);font-size:14px;line-height:1.75">«Para concluir, soy consciente de que estoy al inicio de mi carrera y de que un perfil junior no puede prometer que lo sabe todo. <em style="color:var(--a2)">[Pausa de 1 segundo]</em>. Lo que sí puedo garantizarles es rigor metodológico, pasión por el código limpio, un perfil habituado a entender sistemas complejos y, sobre todo, una enorme capacidad para aprender rápido e integrarme en su cultura de equipo.<br><br><em style="color:var(--a2)">[Mirada fija y sostenida a la cámara]</em> La verdadera pregunta no es si estoy completamente lista, sino cuánto puedo llegar a aportar y crecer dentro del equipo adecuado. Muchas gracias por su tiempo. Quedo a su disposición para cualquier pregunta o para coordinar una entrevista técnica.»</p>
+
+  </div>
+</details>
+</section><div class="dv"><hr></div>
+
+<!-- 05 · BLOG -->
+<section class="s" id="blog"><span class="st">05 · Blog divulgativo</span><h2>Entrada de blog</h2>
+<div class="bg rv">
+  <div class="bm"><span>Lucía Fuentes González</span><span>Mayo 2026</span><span>~850 palabras · 4 min</span></div>
+  <h3>El restaurante que no cierra cuando el cajero se pone enfermo</h3>
+  <p>Imagina un restaurante donde una sola persona cocina, sirve, cobra y friega. Si se pone enferma, el restaurante cierra.</p>
+  <p>Ahora imagina otro con un cocinero, un camarero, un cajero y un equipo de limpieza. Si el cajero falta, el resto sigue. El servicio no se detiene.</p>
+  <p>Esta analogía describe una de las decisiones más importantes al diseñar software: cómo organizar los componentes. En el primer caso estamos ante un <strong>monolito</strong> —una aplicación que lo hace todo—. En el segundo, ante una <strong>arquitectura de microservicios</strong>.</p>
+  <h4>Piezas pequeñas que hablan entre sí</h4>
+  <p>Un microservicio es un programa pequeño que se ocupa de una sola tarea. En una plataforma de reservas hoteleras podría haber uno para la disponibilidad, otro para los pagos, otro para los correos y otro para los precios. Cada uno funciona por separado y se puede reparar sin tocar los demás.</p>
+  <p>Si el servicio de correos se cae, las reservas siguen registrándose. Los correos pendientes se guardan en una lista de espera y se envían cuando se recupera.</p>
+  <div class="pq">Un microservicio bien diseñado sabe hacer una sola cosa y la hace bien. Si falla, el resto sigue adelante.</div>
+  <h4>El buzón intermedio: las colas de mensajes</h4>
+  <p>Para coordinarse, estos servicios usan <strong>colas de mensajes</strong> —herramientas como RabbitMQ— que funcionan como un buzón intermedio. El servicio de reservas deja un mensaje y el de correos lo recoge cuando puede.</p>
+  <p>Este mecanismo se llama <strong>comunicación asíncrona</strong>. Funciona como un mensaje de texto: lo envías y el otro lo lee cuando puede. Ningún servicio depende de que los demás estén listos en ese instante.</p>
+  <h4>No es solo una decisión técnica</h4>
+  <p>Cuando cada servicio es independiente, el equipo que lo desarrolla también puede serlo. Cada uno despliega sus mejoras sin esperar al resto.</p>
+  <p>En Sistemas Distribuidos aprendí los fundamentos: replicación, tolerancia a fallos, consenso. En Sistemas Orientados a Servicios, cómo diseñar APIs REST y componentes desacoplados. En mis prácticas comprobé que estas ideas se aplican a diario en empresas reales.</p>
+  <h4>Herramientas abiertas para problemas reales</h4>
+  <p>Las herramientas de este ecosistema son proyectos de código abierto: Spring Boot, RabbitMQ, MySQL, Linux. Cualquiera puede leer su código y contribuir. Esa transparencia permite aprender de los mejores ingenieros del mundo.</p>
+  <p>La próxima vez que reserves un hotel desde el móvil, piensa que detrás hay decenas de programas coordinándose en silencio. ¿Cuántos servicios crees que han intervenido en tu última reserva?</p>
+  <div class="sr"><strong>Fuente:</strong> Newman, S. (2021). <em>Building Microservices</em> (2.ª ed.). O'Reilly Media. Cap. 1 y 4.</div>
+</div>
+</section><div class="dv"><hr></div>
+
+<footer><p>Lucía Fuentes González · CV Web · EPA · UPM · 2026</p><p style="margin-top:4px"><a href="mailto:luciafuentesgonzalez03@gmail.com">luciafuentesgonzalez03@gmail.com</a></p></footer>
+
+<script>
+const o=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting){el.target.classList.add('v');o.unobserve(el.target)}})},{threshold:.06});
+document.querySelectorAll('.rv').forEach(el=>o.observe(el));
+</script>
+</body></html>
